@@ -23,7 +23,7 @@ def loadFile(path):
     return df
 ```
 
-## Prelimnary Exploratory Data Analysis
+## Preliminary Exploratory Data Analysis
 ```Python3
 def minorEDA(df):
     lineBreak = '------------------'
