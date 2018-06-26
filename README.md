@@ -106,8 +106,8 @@ def TestTrainFitPlot(X, y):
 ```
 # Sample Output(UCI ML Repo, Absenteeism Dataset):
 ### EDA
-<img src="https://github.com/ajh1143/KNN_ModelSelector/tree/master/images/EDA.png" class="inline"/><br>
+<img src="https://github.com/ajh1143/KNN_ModelSelector/blob/master/images/EDA.png" class="inline"/><br>
 ### Default Accuracy n-neighbors
-<img src="https://github.com/ajh1143/KNN_ModelSelector/tree/master/images/acc.png" class="inline"/><br>
+<img src="https://github.com/ajh1143/KNN_ModelSelector/blob/master/images/acc.png" class="inline"/><br>
 ### Checking Multiple n-neighbors
-<img src="https://github.com/ajh1143/KNN_ModelSelector/tree/master/images/myplot.png" class="inline"/><br>
+<img src="https://github.com/ajh1143/KNN_ModelSelector/blob/master/images/myplot.png" class="inline"/><br>
