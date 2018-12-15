@@ -1,6 +1,29 @@
 # KNN_ModelSelector
 Tests, Trains, and Plots results with varying neighbor values for model selection
+_______________________________________________________________________________________________________________________________________
+# Overview
 
+The **k-NN algorithm** is a **supervised learning** technique used in **classification** problems. 
+
+Our goal is to predict a label by developing a generalized model we can apply to previously unseen data.    
+
+## Key Steps:    
+* Extract features and labels    
+`features = df.drop('label', axis=1)     
+labels = df[label]`    
+* Split data into test and train datasets using test_train_split    
+`X_train, X_test, y_train, y_test = train_test_split(features, label, test_size, random state, stratify = target_labels)`    
+* Fit/Train data using knn classifier on training set    
+`knn.fit(training_features, training_labels)`    
+* Predict on labeled test set    
+`knn.predict(test features)`    
+* Compare prediction w/ known labels    
+`y_pred = knn.predict(X_test)`    
+* Metric: Accuracy = Fraction Correct Predictions, SciKitLearn's `score` module    
+`print(knn.score(test features, test labels))`
+* Tune Hyperparameters: # of neighbors used
+
+_______________________________________________________________________________________________________________________________________
 ## Import Libraries
 ```Python3
 from sklearn.model_selection import train_test_split
@@ -10,11 +33,13 @@ import numpy as np
 import matplotlib.pyplot as plt
 ```
 
+_______________________________________________________________________________________________________________________________________
 ## Set Plot Style
 ```Python3
 plt.style.use('ggplot')
 ```
 
+_______________________________________________________________________________________________________________________________________
 ## Load File
 ```Python3
 def loadFile(path):
@@ -23,6 +48,7 @@ def loadFile(path):
     return df
 ```
 
+_______________________________________________________________________________________________________________________________________
 ## Preliminary Exploratory Data Analysis
 ```Python3
 def minorEDA(df):
@@ -43,6 +69,7 @@ def minorEDA(df):
     print(lineBreak*3)
 ```
 
+_______________________________________________________________________________________________________________________________________
 ## Feature Selection
 ```Python3
 def feature(feature, df):
@@ -52,6 +79,7 @@ def feature(feature, df):
     return X, y
 ```
 
+_______________________________________________________________________________________________________________________________________
 ## Test, Train, Plot
 ```Python3
 def TestTrainFitPlot(X, y):
@@ -104,6 +132,8 @@ def TestTrainFitPlot(X, y):
     #Generate Plot
     plt.show()
 ```
+
+_______________________________________________________________________________________________________________________________________
 # Sample Output(UCI ML Repo, Absenteeism Dataset):
 ### EDA
 <img src="https://github.com/ajh1143/KNN_ModelSelector/blob/master/images/EDA.png" class="inline"/><br>
